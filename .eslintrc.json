@@ -1,0 +1,59 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:vue/vue3-strongly-recommended"
+	],
+	"parser": "vue-eslint-parser",
+	"parserOptions": {
+		"parser": "@typescript-eslint/parser",
+		"project": "./tsconfig.json",
+		"sourceType": "module",
+		"extraFileExtensions": [
+			".ts",
+			".tsx",
+			".vue"
+		]
+	},
+	"plugins": [
+		"vue"
+	],
+	"rules": {
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/strict-boolean-expressions": "off",
+		"@typescript-eslint/consistent-type-definitions": "off",
+		"@typescript-eslint/consistent-type-assertions": "off",
+		"@typescript-eslint/no-dynamic-delete": "off",
+		"vue/html-indent": ["error", 4],
+		"indent": "off",
+		"no-tabs": "off",
+		"@typescript-eslint/indent": ["error", 4],
+		"@typescript-eslint/member-delimiter-style": ["error", {
+			"multiline": {
+				"delimiter": "semi",
+				"requireLast": true
+			},
+			"singleline": {
+				"delimiter": "semi",
+				"requireLast": false
+			},
+			"multilineDetection": "brackets"
+		}],
+		"@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+		"@typescript-eslint/semi": ["error", "always"],
+		"@typescript-eslint/no-explicit-any": "warn"
+	},
+	"overrides": [
+		{
+			"files": ["*.vue"],
+			"rules": {
+				"@typescript-eslint/no-floating-promises": "off"
+			}
+		}
+	],
+	"root": true
+}

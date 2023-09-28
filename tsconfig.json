@@ -1,0 +1,26 @@
+{
+
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "ESNext",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"outDir": "./dist/",
+		"target": "es5",
+		"jsx": "preserve",
+		"allowJs": true,
+		"strict": true,
+		"moduleResolution": "node",
+		"noImplicitAny": false,
+		"downlevelIteration": true,
+		"paths": {
+			"*":["./src/*"]
+		}
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS",
+		},
+		"include": ["webpack.config.ts"]
+	}
+}
